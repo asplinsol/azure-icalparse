@@ -1,0 +1,21 @@
+{
+  "name": "azure",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "ical": "^0.6.0"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.0.2-beta2",
+    "@types/ical": "^0.6.1",
+    "@types/node": "^13.5.0",
+    "typescript": "^3.3.3"
+  }
+}

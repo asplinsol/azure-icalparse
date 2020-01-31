@@ -1,0 +1,18 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          // leave imports as they are
+          "modules": false,
+          "targets": {
+              "node": true
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      // support dynamic import syntax, but leave it unchanged
+      "@babel/plugin-syntax-dynamic-import"
+    ]
+  }

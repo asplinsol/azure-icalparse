@@ -3,19 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "prestart": "npm run build",
-    "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "build": "npm run clean && webpack --config webpack.config.js  && copyfiles --flat icalparse/*.json dist && npm run zip",
+    "zip": "npm-build-zip --source=dist/ --info=true",
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "ical": "^0.6.0"
   },
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "@types/ical": "^0.6.1",
     "@types/node": "^13.5.0",
-    "typescript": "^3.3.3"
+    "awesome-typescript-loader": "^5.2.1",
+    "copyfiles": "^2.1.1",
+    "npm-build-zip": "^1.0.2",
+    "rimraf": "^3.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.3.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

@@ -19,4 +19,4 @@ Compile:
   artifacts:
       name: "$CI_COMMIT_REF_NAME"
       paths:
-        - dist/
+        - azure_1.0.0.zip

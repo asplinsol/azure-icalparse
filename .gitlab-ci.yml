@@ -17,6 +17,5 @@ Compile:
   script:
     - npm run build
   artifacts:
-      name: "$CI_COMMIT_REF_NAME"
       paths:
         - azure_1.0.0.zip

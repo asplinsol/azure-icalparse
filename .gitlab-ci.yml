@@ -1,11 +1,8 @@
-
 stages:
   - build
  
 Compile:
   stage: build
-  tags:
-    - typescript
   script:
     - npm i
     - npm run build

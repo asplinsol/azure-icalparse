@@ -16,6 +16,8 @@ Compile:
   stage: build
   script:
     - npm run build
+    - cd dist && npm i && cd ..
+    - npm run package
   artifacts:
       paths:
         - azure_1.0.0.zip

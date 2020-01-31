@@ -16,7 +16,6 @@ Compile:
   stage: build
   script:
     - npm run build
-    - npm run package
   artifacts:
       paths:
         - icalparser/

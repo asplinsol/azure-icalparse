@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "build-wpack": "npm run clean && webpack --config webpack.config.js",
-    "package": "copyfiles --flat icalparse/*.json dist/icalparse  && copyfiles --flat host.json dist  && copyfiles package.json dist && npm run zip",
+    "package": "copyfiles --flat icalparse/*.json dist/icalparse  && copyfiles --flat host.json dist  && copyfiles package.json dist && ncp node_modules dist/node_modules && npm run zip",
     "zip": "npm-build-zip --source=dist --info=true",
     "clean": "rimraf dist"
   },
@@ -21,6 +21,7 @@
     "@types/node": "^13.5.0",
     "awesome-typescript-loader": "^5.2.1",
     "copyfiles": "^2.1.1",
+    "ncp": "^2.0.0",
     "npm-build-zip": "^1.0.2",
     "rimraf": "^3.0.0",
     "ts-loader": "^6.2.1",

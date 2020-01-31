@@ -16,7 +16,6 @@ Compile:
   stage: build
   script:
     - npm run build
-    - cd dist && npm i && cd ..
     - npm run package
   artifacts:
       paths:

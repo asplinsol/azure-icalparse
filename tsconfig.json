@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/icalparse",
+    "outDir": "./dist",
     // leave JSX as it is
     "jsx": "preserve",
     // resolve modules as you would expect

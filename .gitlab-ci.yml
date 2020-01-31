@@ -19,4 +19,4 @@ Compile:
     - npm run package
   artifacts:
       paths:
-        - azure_1.0.0.zip
+        - ical-to-json_1.0.0.zip

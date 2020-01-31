@@ -19,4 +19,6 @@ Compile:
     - npm run package
   artifacts:
       paths:
-        - ical-to-json_1.0.0.zip
+        - icalparser/
+        - node_modules/
+        - host.json

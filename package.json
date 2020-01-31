@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npm run clean && tsc",
-    "package": "copyfiles --flat src/*.json dist/icalparser  && copyfiles host.json package.json dist && npm run zip",
-    "zip": "npm-build-zip --source=dist --info=true",
-    "clean": "rimraf dist"
+    "build": "npm run clean && tsc && copyfiles --flat src/*.json icalparser",
+    "clean": "rimraf icalparser"
   },
   "dependencies": {
     "ical": "^0.6.0"

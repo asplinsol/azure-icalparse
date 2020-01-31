@@ -1,0 +1,15 @@
+
+stages:
+  - build
+ 
+Compile:
+  stage: build
+  tags:
+    - typescript
+  script:
+    - npm i
+    - npm run build
+  artifacts:
+      name: "$CI_COMMIT_REF_NAME"
+      paths:
+        - dist/

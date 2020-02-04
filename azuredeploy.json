@@ -16,7 +16,7 @@
         "hostingPlanName": "[concat(parameters('FunctionName'), '-website')]",
         "storageAccountName": "[toLower(concat(parameters('FunctionName'), 'store'))]",
         "location": "[resourceGroup().location]",
-        "packageURL": "https://gitlab.com/asplinsol/azure-icalparse/-/jobs/422282992/artifacts/download"
+        "packageURL": "https://gitlab.com/asplinsol/azure-icalparse/-/jobs/426051148/artifacts/download"
     },
     "resources": [
         {

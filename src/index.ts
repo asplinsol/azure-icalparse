@@ -27,8 +27,11 @@ const emailIn: AzureFunction =  function (context: Context, data: Incoming) {
   const events = new Array<CalendarComponent>();
   for (let k in ics) {
     if (ics.hasOwnProperty(k)) {
-            var ev = ics[k];
+            var ev: CalendarComponent & { attendee?: Object | Array<any>} = ics[k];
             if (ev.type == 'VEVENT') {
+              if (ev.attendee && !Array.isArray(ev.attendee)) {
+                ev.attendee = [ ev.attendee ];
+              }
               events.push(ev);
             }
     }
